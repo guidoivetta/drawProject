@@ -8,8 +8,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight * 0.8);
   background(51);
 
-  var resetButton = createButton("reset");
-  resetButton.mousePressed(resetSketch);
+  // var resetButton = createButton("reset");
+  // resetButton.mousePressed(resetSketch);
 }
 
 function draw() {
