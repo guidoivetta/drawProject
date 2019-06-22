@@ -12,9 +12,9 @@ function draw() {
   
   if (mouseIsPressed) {
     if (growing) {
-      shapeSize += 10;
+      shapeSize += 3;
     } else {
-      shapeSize -= 10;
+      shapeSize -= 3;
     }
     
     if (shapeSize >= width / 2) {
