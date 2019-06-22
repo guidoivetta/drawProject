@@ -7,28 +7,20 @@ function setup() {
 
 function draw() {
   background(51);
-  
+
   ellipse(mouseX, mouseY, shapeSize, shapeSize);
-  
+
   if (mouseIsPressed) {
-    if (growing) {
-      shapeSize += 3;
-    } else {
-      shapeSize -= 3;
+    // checking whether it should grow
+    if (shapeSize >= width / 2 || shapeSize <= 50) {
+      growing = !growing;
     }
-    
-    if (shapeSize >= width / 2) {
-      growing = false;
-    }
-    if (shapeSize <= 50) {
-      growing = true;
-    }
+
+    // growing or shrinking
+    shapeSize = growing ? shapeSize + 3 : shapeSize - 3;
   }
 }
-
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-
-
