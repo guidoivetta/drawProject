@@ -1,7 +1,6 @@
 let shapeSize = 100;
 let growing = true;
 let growthSpeed = 3;
-let color = 255;
 let red = 255;
 let randomGreen;
 let randomBlue;
@@ -17,7 +16,7 @@ function setup() {
 }
 
 function draw() {
-  fill(color, randomGreen, randomBlue);
+  fill(red, randomGreen, randomBlue);
 
   ellipse(mouseX, mouseY, shapeSize, shapeSize);
 
