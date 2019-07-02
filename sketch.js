@@ -1,16 +1,21 @@
-let shapeSize = 100;
+let shapeSize;
+let maxSize;
+let minSize;
 let growing = true;
-let growthSpeed = 3;
+let growthSpeed = 1;
 let red = 255;
 let randomGreen;
 let randomBlue;
-let darkening = true;
+let brightening = true;
 
 function setup() {
   createCanvas(windowWidth, windowHeight * 0.995);
   background(51);
   noStroke();
-  
+  maxSize = width / 2;
+  minSize = 100;
+  shapeSize = minSize + 1;
+
   randomGreen = random(256);
   randomBlue = random(256);
 }
@@ -23,7 +28,7 @@ function draw() {
   if (mouseIsPressed) {
     // Size oscillation---------------------------
     // checking whether it should grow
-    if (shapeSize >= width / 2 || shapeSize <= 50) {
+    if (shapeSize >= maxSize || shapeSize <= minSize) {
       growing = !growing;
     }
 
@@ -33,10 +38,10 @@ function draw() {
     // Color oscillation--------------------------
     // checking whether it should darken
     if (red == 255 || red == 0) {
-      darkening = !darkening;
+      brightening = !brightening;
     }
 
     // brightening or darkening
-    red += darkening ? 1 : -1;
+    red += brightening ? 1 : -1;
   }
 }
