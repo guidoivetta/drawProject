@@ -14,7 +14,7 @@ function setup() {
   noStroke();
   maxSize = width / 2;
   minSize = 100;
-  shapeSize = minSize + 1;
+  shapeSize = (minSize + maxSize) / 2;
 
   randomGreen = random(256);
   randomBlue = random(256);
