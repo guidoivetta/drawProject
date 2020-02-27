@@ -1,7 +1,7 @@
 let shapeSize;
 let maxSize;
 let minSize;
-let growing = true;
+let growing = false;
 let growthSpeed = 1;
 let red = 255;
 let randomGreen;
